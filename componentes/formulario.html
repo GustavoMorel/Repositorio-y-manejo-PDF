@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario con Select</title>
+</head>
+<body>
+
+<h2>Selecciona dos valores</h2>
+
+<form action="procesar1.php" method="post" id="myForm">
+  <label for="opcion1">Opción 1:</label>
+  <select id="opcion1" name="opcion1">
+    <option value="valor1">Valor 1</option>
+    <option value="valor2">Valor 2</option>
+    <option value="valor3">Valor 3</option>
+  </select>
+  <br><br>
+  
+  <label for="opcion2">Opción 2:</label>
+  <select id="opcion2" name="opcion2">
+    <option value="valor4">Valor 4</option>
+    <option value="valor5">Valor 5</option>
+    <option value="valor6">Valor 6</option>
+  </select>
+  <br><br>
+  
+  <input type="submit" value="Enviar">
+</form>
+
+
+<script src="script_com.js"></script>
+
+</body>
+</html>
