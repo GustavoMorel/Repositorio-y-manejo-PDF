@@ -39,7 +39,7 @@
                             <span class="icon-bar"> </span>
 
                         </button>
-                        
+
 
                     </div>
 
@@ -51,17 +51,24 @@
                                 </a>
                                 <ul class="dropdown-menu multi-level" role="menu">
                                     <li> <a href="../pages/subir_documentos.php">Subir Documentos</a></li>
-                                    <li> <a href="../usuario/baja_usuario.php">Baja</a></li>
-                                    <li> <a href="../usuario/modifica-usuario-pass.php">Modificacion Password Usuarios</a></li>
+                                    <li> <a href="../pages/rela_docu_tema.php">Clasificar Documentos</a></li>
                                     <li> <a href="../usuario/consulta_usuario.php">Consulta</a></li>
-                                    <li> <a href="#" class="divider"></a></li>
-                                    <li> <a href="#"> Submen&uacute; Area y Nivel</a></li>
-                                    <li> <a href="../usuario/alta-usuario-area.php">Asignaci&oacute;n de Area</a></li>
-                                    <li> <a href="../usuario/baja-usuario-area.php">Baja Area de Usuario</a></li>
-                                    <!-- <li> <a href="../enConstruccion.html">Modificacion</a></li>-->
-                                    <li> <a href="../enConstruccion.html">Consulta</a></li>
+
                                 </ul>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                    Mantenimiento<span class="caret"> </span>
+                                </a>
+                                <ul class="dropdown-menu multi-level" role="menu">
+                                    <li> <a href="../pages/insertar_temas.php">Subir Temas</a></li>
+                                    <li> <a href="../pages/insertar_subtemas.php">Subir Subtemas</a></li>
+
+                                    <li> <a href="#">Consulta</a></li>
+
+                                </ul>
+                            </li>
+
                             <li><a href="">Operativo</a> </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">

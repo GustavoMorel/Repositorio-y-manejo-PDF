@@ -24,21 +24,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Verificar si se han recibido los valores del select
-  if (isset($_POST['opcion1']) && isset($_POST['opcion2'])) {
+  if (isset($_POST['tema'])) {
       // Obtener los valores seleccionados
-      $opcion1 = $_POST['opcion1'];
+      $opcion1 = $_POST['tema'];
       $opcion2 = $_POST['opcion2'];
       
       // Obtener el texto adicional de la opción 1
       $texto_adicional_opcion1 = $_POST['opcion1_extra'];
 
-      $query = ("INSERT INTO subtema(subtema_id_tema, subtema_tema_den, subtema_den)
-    	VALUES('$opcion1', '$texto_adicional_opcion1', '$opcion2')");
+      $query = ("INSERT INTO tema(tema_den)
+    	VALUES('$opcion1')");
       $consulta = mysqli_query($conn, $query);
 
 
       if ($consulta) {
-          echo 'El subtema ha sido dato de alta.';
+          echo 'El Tema ha sido dato de alta.';
       }
 
   }
@@ -47,6 +47,6 @@ mysqli_close($conn);
 
 
 // Redirigir a la página de inicio
-header("Location: ../pages/insertar_subtemas.php");
+header("Location: ../pages/insertar_temas.php");
 }
 ?>

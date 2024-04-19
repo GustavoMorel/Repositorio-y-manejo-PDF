@@ -30,7 +30,7 @@ require('../componentes/configBD.php');
 
       <div class="col-md-5">
       
-        <form id="myForm" action="" method="POST" enctype="multipart/form-data">
+        <form id="myForm" action="recibeFileDocu.php" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <label for="tema">Seleccione un Tema:</label>
 
@@ -62,6 +62,8 @@ require('../componentes/configBD.php');
               }
               ?>
             </select>
+            <!-- Campo oculto para enviar el texto adicional de la opción 1 -->
+          <input type="hidden" name="opcion1_extra" id="opcion1_extra">
           </div>
           
           <div class="form-group">
@@ -71,6 +73,9 @@ require('../componentes/configBD.php');
 
 
           <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Enviar Formulario</button>
+          <br>
+          <a href="../menu/menu_repo.php"><input type="button" value="Volver a Menú" class="btn btn-primary btn-lg btn-block"></a>
+        </form>
         </form>
       </div>
 
@@ -82,7 +87,7 @@ require('../componentes/configBD.php');
             <h2 class="subtitulo">Sub Temas Guardados</h2>
           </span>
           <span class="cuerpo-vista-docu"> 
-          <?php include '../componentes/listar_subtemas.php'; ?>
+          <?php include '../componentes/listar_subtemas_1.php'; ?>
           </span>
         </div>
 

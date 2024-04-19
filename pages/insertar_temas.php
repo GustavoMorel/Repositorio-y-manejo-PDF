@@ -52,29 +52,11 @@ require('../componentes/configBD.php');
       <div class="col-md-5">
         <!-- <form  action="../componentes/insertar_subtemas.php" method="POST" enctype="multipart/form-data"> -->
         <!-- <form id="myFormDocuTema" action="../componentes/insertar_subtemas.php" method="POST" enctype="multipart/form-data"> -->
-        <form method="POST" action="../componentes/insertar_subtemas.php" onsubmit="document.getElementById('opcion1_extra').value = obtenerTextoAdicional()">
-          <!--<div class="form-group">-->
-          <label for="opcion1">Seleccione un Tema:</label>
-
-          <select id="opcion1" name="opcion1">
-            <?php
-            while ($obj = mysqli_fetch_object($consulta)) { ?>
-
-              <option value="<?php echo $obj->id ?>" data-extra="<?php echo $obj->tema_den; ?>"><?php echo $obj->tema_den; ?></option>
-
-            <?php
-            }
-            ?>
-          </select>
-          <!--</div>-->
-
-          <!-- Campo oculto para enviar el texto adicional de la opción 1 -->
-          <input type="hidden" name="opcion1_extra" id="opcion1_extra">
-          <br><br>
+        <form method="POST" action="../componentes/insertar_temas.php" onsubmit="document.getElementById('opcion1_extra').value = obtenerTextoAdicional()">
 
           <div class="form-group">
-            <label for="usuario">Sub Tema: </label>
-            <input type="text" id="opcion2" name="opcion2" class="form-control">
+            <label for="usuario">Tema: </label>
+            <input type="text" id="tema" name="tema" class="form-control">
           </div>
 
           <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Enviar Formulario</button>
@@ -91,7 +73,7 @@ require('../componentes/configBD.php');
             <h2 class="subtitulo">Sub Temas Guardados</h2>
           </span>
           <span class="cuerpo-vista-docu">
-            <?php include '../componentes/listar_subtemas.php'; ?>
+            <?php include '../componentes/listar_temas.php'; ?>
           </span>
         </div>
 
